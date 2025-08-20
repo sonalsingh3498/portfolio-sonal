@@ -21,11 +21,10 @@ export function PortfolioTabs() {
   const TabButton = ({ id, children, isActive }: { id: string; children: React.ReactNode; isActive: boolean }) => (
     <button
       onClick={() => setActiveTab(id)}
-      className={`py-4 px-2 border-b-2 font-medium text-sm whitespace-nowrap smooth-transition ${
-        isActive
-          ? "border-navy-600 text-navy-600"
-          : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
-      }`}
+      className={`py-4 px-2 border-b-2 font-medium text-sm whitespace-nowrap smooth-transition ${isActive
+        ? "border-navy-600 text-navy-600"
+        : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+        }`}
     >
       {children}
     </button>
@@ -39,17 +38,17 @@ export function PortfolioTabs() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <div className="w-15 h-15 bg-gradient-to-r  flex items-center justify-center">
-               
-               <img src={image} className="object-cover rounded-full"/>
-               
+
+                <img src={image} className="object-cover rounded-full" />
+
               </div>
               <div>
                 <h1 className="text-lg font-semibold text-gray-900 dark:text-white">Sonal Singh</h1>
                 <p className="text-sm text-gray-500 dark:text-gray-400">Full Stack Developer</p>
               </div>
             </div>
-           
-           
+
+
           </div>
         </div>
       </header>
@@ -68,14 +67,14 @@ export function PortfolioTabs() {
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
+
         {/* Home/About Tab */}
         {activeTab === "home" && (
           <div className="space-y-16">
             {/* Hero Section */}
             <section className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-r  rounded-full flex items-center justify-center text-white text-4xl font-bold">
-               <img src={image} className="w-30 h-30 object-cover rounded-full"/>
+                <img src={image} className="w-30 h-30 object-cover rounded-full" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 Full Stack Developer
@@ -101,13 +100,13 @@ export function PortfolioTabs() {
               <Card className="p-8">
                 <CardContent className="space-y-6 p-0">
                   <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                    I'm a dedicated Full Stack Developer with expertise in building scalable web and mobile applications. 
-                    My experience spans across modern technologies including React.js, React Native, Node.js, and ASP.NET Core, 
+                    I'm a dedicated Full Stack Developer with expertise in building scalable web and mobile applications.
+                    My experience spans across modern technologies including React.js, React Native, Node.js, and ASP.NET Core,
                     with strong proficiency in Azure cloud deployments.
                   </p>
                   <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                    I'm passionate about crafting user-centric designs, optimizing performance, and delivering production-grade 
-                    applications with advanced features like offline capabilities, biometric authentication, and push notifications. 
+                    I'm passionate about crafting user-centric designs, optimizing performance, and delivering production-grade
+                    applications with advanced features like offline capabilities, biometric authentication, and push notifications.
                     I thrive in Agile environments and enjoy collaborating with cross-functional teams to deliver exceptional results.
                   </p>
                 </CardContent>
@@ -118,7 +117,7 @@ export function PortfolioTabs() {
             <section>
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Technical Skills</h2>
               <div className="grid md:grid-cols-3 gap-8">
-                
+
                 {/* Frontend Skills */}
                 <Card className="card-hover smooth-transition">
                   <CardContent className="p-6">
@@ -179,13 +178,13 @@ export function PortfolioTabs() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">My Work</h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                A showcase of projects that demonstrate my expertise in full-stack development, 
+                A showcase of projects that demonstrate my expertise in full-stack development,
                 from mobile applications to enterprise web solutions.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              
+
               {/* EG Club App Project */}
               <Card className="overflow-hidden card-hover smooth-transition">
                 <div className="h-48 bg-gradient-to-br from-navy-600 to-blue-500 flex items-center justify-center">
@@ -199,7 +198,7 @@ export function PortfolioTabs() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">EG Club Australia App</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Cross-platform mobile application built with React Native featuring location services, 
+                    Cross-platform mobile application built with React Native featuring location services,
                     rewards system, biometric authentication, and real-time fuel price syncing.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -214,6 +213,19 @@ export function PortfolioTabs() {
                     </svg>
                     HorizonX • 2024
                   </div>
+                  <button
+                    onClick={() => window.open("https://play.google.com/store/apps/details?id=com.egclub.android", "_blank")}
+                    className="w-full px-4 py-2 mb-2 mt-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 smooth-transition"
+                  >
+                    Android
+                  </button>
+
+                  <button
+                    onClick={() => window.open("https://apps.apple.com/au/app/eg-club/id1507394606", "_blank")}
+                    className="w-full px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 smooth-transition"
+                  >
+                    Ios
+                  </button>
                 </CardContent>
               </Card>
 
@@ -230,7 +242,7 @@ export function PortfolioTabs() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">EG Internal CMS Portal</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Full-stack content management system with robust backend functionality, 
+                    Full-stack content management system with robust backend functionality,
                     user authentication, and intuitive admin interface for content creators.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -261,7 +273,7 @@ export function PortfolioTabs() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">HelpDesk Pro</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Enterprise IT support ticket system with role-based dashboards, automated email notifications, 
+                    Enterprise IT support ticket system with role-based dashboards, automated email notifications,
                     and comprehensive reporting built with ASP.NET Core.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -292,7 +304,7 @@ export function PortfolioTabs() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Enterprise Client Solutions</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Delivered location services and search functionality for major brands including Kate Spade, 
+                    Delivered location services and search functionality for major brands including Kate Spade,
                     Away Resorts, and Coach with multi-language support across 7 locales.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -307,66 +319,72 @@ export function PortfolioTabs() {
                     </svg>
                     Multiple Clients • 2022-2024
                   </div>
+                  <button
+                    onClick={() => window.open("https://www.dotsquares.com/answer?query=Expertise", "_blank")}
+                    className="w-full px-4 py-2 mt-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 smooth-transition"
+                  >
+                    Dotsquares Search
+                  </button>
                 </CardContent>
               </Card>
-               {/* Client Projects */}
-             <Card className="overflow-hidden card-hover smooth-transition">
-  <div className="h-48 bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
-    <div className="text-white text-center">
-      <svg
-        className="w-16 h-16 mx-auto mb-2"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
-        ></path>
-      </svg>
-      <p className="text-sm opacity-90">Next.js project</p>
-    </div>
-  </div>
-  <CardContent className="p-6">
-    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-      Enterprise Client Solutions
-    </h3>
-    <p className="text-gray-600 dark:text-gray-300 mb-4">
-      Theme and layout changes when select from drop down
-    </p>
-    <div className="flex flex-wrap gap-2 mb-4">
-      <Badge variant="outline">next.js</Badge>
-      <Badge variant="outline">tailwind css</Badge>
-      <Badge variant="outline">TypeScript</Badge>
-    </div>
-    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
-      <svg
-        className="w-4 h-4 mr-1"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-        ></path>
-      </svg>
-      2025
-    </div>
+              {/* Client Projects */}
+              <Card className="overflow-hidden card-hover smooth-transition">
+                <div className="h-48 bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <svg
+                      className="w-16 h-16 mx-auto mb-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                      ></path>
+                    </svg>
+                    <p className="text-sm opacity-90">Next.js project</p>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                    Enterprise Client Solutions
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    Theme and layout changes when select from drop down
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge variant="outline">next.js</Badge>
+                    <Badge variant="outline">tailwind css</Badge>
+                    <Badge variant="outline">TypeScript</Badge>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    <svg
+                      className="w-4 h-4 mr-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                      ></path>
+                    </svg>
+                    2025
+                  </div>
 
-    {/* Preview Button */}
-    <button
-      onClick={() => window.open("https://multi-theme-ngd3.vercel.app/", "_blank")}
-      className="w-full px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 smooth-transition"
-    >
-      Preview
-    </button>
-  </CardContent>
-</Card>
+                  {/* Preview Button */}
+                  <button
+                    onClick={() => window.open("https://multi-theme-ngd3.vercel.app/", "_blank")}
+                    className="w-full px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 smooth-transition"
+                  >
+                    Preview
+                  </button>
+                </CardContent>
+              </Card>
 
             </div>
           </div>
@@ -383,7 +401,7 @@ export function PortfolioTabs() {
             </div>
 
             <div className="space-y-8">
-              
+
               {/* HorizonX Experience */}
               <Card className="p-8">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
@@ -403,7 +421,7 @@ export function PortfolioTabs() {
                     Current Role
                   </Badge>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Key Projects & Responsibilities:</h4>
@@ -444,7 +462,7 @@ export function PortfolioTabs() {
                     2.5 Years
                   </Badge>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Key Projects & Responsibilities:</h4>
@@ -501,11 +519,11 @@ export function PortfolioTabs() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              
+
               {/* Contact Information */}
               <Card className="p-8">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Contact Information</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-navy-100 dark:bg-navy-900 rounded-lg flex items-center justify-center mr-4">
@@ -557,12 +575,12 @@ export function PortfolioTabs() {
               <div className="bg-gradient-to-br from-navy-600 to-blue-500 rounded-xl p-8 text-white">
                 <div className="mb-6">
                   <svg className="w-12 h-12 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
                   </svg>
                 </div>
                 <blockquote className="text-lg italic mb-4">
-                  "Sonal consistently demonstrated adaptability across multiple technology stacks, excellent 
-                  collaboration with technical and non-technical stakeholders, methodical problem-solving 
+                  "Sonal consistently demonstrated adaptability across multiple technology stacks, excellent
+                  collaboration with technical and non-technical stakeholders, methodical problem-solving
                   abilities, and reliability in meeting deadlines while maintaining high code quality standards."
                 </blockquote>
                 <div className="flex items-center">
@@ -582,7 +600,7 @@ export function PortfolioTabs() {
               <Card className="p-8 max-w-2xl mx-auto">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Ready to Work Together?</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  I'm always excited to take on new challenges and collaborate on innovative projects. 
+                  I'm always excited to take on new challenges and collaborate on innovative projects.
                   Let's discuss how I can contribute to your team's success.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
